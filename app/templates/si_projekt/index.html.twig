@@ -1,0 +1,19 @@
+{% extends "base2.html.twig" %}
+
+{% block title %}
+    {{ 'title.page'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        {{ 'title.page'|trans }}
+    </h1>
+    <br>
+    <a href="{{ url('auth_login') }}" title="{{ 'label.login'|trans }}">
+        {{ 'label.login'|trans }}
+    </a>
+    <br>
+    <a href="{{ url('register_index')}}" title="{{ 'label.register'|trans }}">
+                {{ 'label.register'|trans }}
+            </a>
+{% endblock %}

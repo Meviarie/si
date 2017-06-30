@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.contact_app'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        {{ 'title.contact_app'|trans }}
+    </h1>
+    {% if contacts|length %}
+        <div>
+            {{ contacts.name }}, {{ contacts.surname }}, {{ contacts.phone_number }}, {{ contacts.mail }}, {{ contacts.web_page }}</li>}
+            <br>
+            <a href="{{ url('contacts_edit', {'id': contacts.id_contacts}) }}" title="{{ 'label.edit'|trans }}">
+                {{ 'label.edit'|trans }}
+            </a>
+            <br>
+            <a href="{{ url('contacts_delete', {'id': contacts.id_contacts}) }}" title="{{ 'label.delete'|trans }}">
+                {{ 'label.delete'|trans }}
+            </a>
+        </div>
+    {% else %}
+        <div>
+            {{ 'title.no_contacts'|trans }}
+        </div>
+    {% endif %}
+    <a href="{{ url('contacts_index') }}" title="{{ 'label.back_to_list'|trans }}">
+        {{ 'label.back_to_list'|trans }}
+    </a>
+{% endblock %}

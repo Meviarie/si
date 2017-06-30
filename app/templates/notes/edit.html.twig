@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title.notes_edit'|trans({'%id%': notes.id_notes}) }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.notes_edit'|trans({'%id%': notes.id_notes}) }}</h1>
+    {{ form_start(form, { method: 'post', action: url('notes_edit', {'id':  notes.id_notes}) }) }}
+
+    {% form_theme form with ['bootstrap_3_horizontal_layout.html.twig'] %}
+
+    {{ form_widget(form) }}
+    <input type="submit" value="{{ 'action.save_notes'|trans }}" class="btn btn-success" />
+    {{ form_end(form) }}
+{% endblock %}

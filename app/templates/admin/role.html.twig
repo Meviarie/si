@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'admin.role'|trans }}{% endblock %}
+
+{% block body %}
+    {# ... #}
+    {% form_theme form with ['bootstrap_3_horizontal_layout.html.twig', 'form/form_errors.html.twig'] %}
+    {# ... #}
+    <a href="{{ url('admin_index') }}" title="{{ 'label.back_to_users'|trans }}">
+        {{ 'label.back_to_users'|trans }}
+    </a>
+    <h1>{{ 'admin.role'|trans }}</h1>
+    {{ form_start(form, { method: 'post', action: url('admin_edit_role',{'id': id}) }) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-success" />
+    {{ form_end(form) }}
+{% endblock %}

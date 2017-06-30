@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title.contacts_delete'|trans({'%id%': contacts.id_contacts}) }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.contacts_delete'|trans({'%id%': contacts.id_contacts}) }}</h1>
+    {{ form_start(form, { method: 'post', action: url('contacts_delete', {'id': contacts.id_contacts}) }) }}
+
+    {% form_theme form with ['bootstrap_3_horizontal_layout.html.twig', 'form/form_errors.html.twig'] %}
+
+    {{ form_widget(form) }}
+    <input type="submit" value="{{ 'action.delete'|trans }}" class="btn btn-success" />
+    {{ form_end(form) }}
+    <a href="{{ url('contacts_index') }}" title="{{ 'label.back_to_list'|trans }}" class="btn btn-default">
+        {{ 'label.back_to_list'|trans }}
+    </a>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.event'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        {{ 'title.event'|trans }}
+    </h1>
+    {% if events|length %}
+        <div>
+            {{ events.content }}
+            <br>
+            <a href="{{ url('events_edit', {'id': events.id_events}) }}" title="{{ 'label.edit_events'|trans }}">
+                {{ 'label.edit_events'|trans }}
+            </a>
+            <br>
+            <a href="{{ url('events_delete', {'id': events.id_events}) }}" title="{{ 'label.delete_events'|trans }}">
+                {{ 'label.delete_events'|trans }}
+            </a>
+        </div>
+    {% else %}
+        <div>
+            {{ 'title.no_events'|trans }}
+        </div>
+    {% endif %}
+    <a href="{{ url('events_index') }}" title="{{ 'label.back_to_list'|trans }}">
+        {{ 'label.back_to_list'|trans }}
+    </a>
+{% endblock %}

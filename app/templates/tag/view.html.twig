@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.tag'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        {{ 'title.tag'|trans }}
+    </h1>
+    {% if tag|length %}
+        <div>
+            {{ tag.name }}
+            <br>
+            <a href="{{ url('tag_edit', {'id': tag.id}) }}" title="{{ 'label.edit'|trans }}">
+                {{ 'label.edit'|trans }}
+            </a>
+            <br>
+            <a href="{{ url('tag_delete', {'id': tag.id}) }}" title="{{ 'label.delete'|trans }}">
+                {{ 'label.delete'|trans }}
+            </a>
+        </div>
+    {% else %}
+        <div>
+            {{ 'title.no_bookmark'|trans }}
+        </div>
+    {% endif %}
+    <a href="{{ url('tag_index') }}" title="{{ 'label.back_to_list'|trans }}">
+        {{ 'label.back_to_list'|trans }}
+    </a>
+
+
+{% endblock %}

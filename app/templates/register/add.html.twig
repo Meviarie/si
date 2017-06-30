@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'title.register_add'|trans }}{% endblock %}
+
+{% block body %}
+    {# ... #}
+    {% form_theme form with ['bootstrap_3_horizontal_layout.html.twig'] %}
+    {# ... #}
+    <h1></h1>
+    {{ form_start(form, { method: 'post', action: url('register_add') }) }}
+    {{ form_widget(form) }}
+    <style type = "text/css">
+        .form-group label.control-label.required:after {
+            content: " *";
+            color: #a94442;;
+        }
+    </style>
+    <input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-success" />
+    {{ form_end(form) }}
+{% endblock %}

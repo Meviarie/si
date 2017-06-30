@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.notes_app'|trans }}
+{% endblock %}
+
+{% block body %}
+    {% include '_paginator.html.twig' with {
+    paginator: paginator,
+    route_name: 'notes_index_paginated',
+    } %}
+    <h1>
+        {{ 'title.notes_app'|trans }}
+    </h1>
+    {% if paginator.data|length %}
+        <ul>
+            {% for row in paginator.data %}
+                <li>{{ row.content }}</li>
+                <a href="{{ url('notes_view', {'id': row.id_notes}) }}" title="{{ 'label.view_contact'|trans }}">
+                    {{ 'label.view_contact'|trans }}
+                </a>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div>
+            {{ 'title.list_is_empty'|trans }}
+        </div>
+    {% endif %}
+    <br>
+    <a href="{{ url('notes_add') }}" title="{{ 'label.add_notes'|trans }}">
+        {{ 'label.add_note'|trans }}
+    </a>
+
+
+{% endblock %}

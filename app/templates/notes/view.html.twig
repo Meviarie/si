@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.note'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        {{ 'title.note'|trans }}
+    </h1>
+    {% if notes|length %}
+        <div>
+            {{ notes.content }}
+            <br>
+            <a href="{{ url('notes_edit', {'id': notes.id_notes}) }}" title="{{ 'label.edit_note'|trans }}">
+                {{ 'label.edit_note'|trans }}
+            </a>
+            <br>
+            <a href="{{ url('notes_delete', {'id': notes.id_notes}) }}" title="{{ 'label.delete_note'|trans }}">
+                {{ 'label.delete_note'|trans }}
+            </a>
+        </div>
+    {% else %}
+        <div>
+            {{ 'title.no_note'|trans }}
+        </div>
+    {% endif %}
+    <a href="{{ url('notes_index') }}" title="{{ 'label.back_to_list'|trans }}">
+        {{ 'label.back_to_list'|trans }}
+    </a>
+{% endblock %}

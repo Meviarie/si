@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.task'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        {{ 'title.task'|trans }}
+    </h1>
+    {% if tasks|length %}
+        <div>
+            {{ tasks.content }}
+            <br>
+            <a href="{{ url('tasks_edit', {'id': tasks.id_tasks}) }}" title="{{ 'label.edit_task'|trans }}">
+                {{ 'label.edit_task'|trans }}
+            </a>
+            <br>
+            <a href="{{ url('tasks_delete', {'id': tasks.id_tasks}) }}" title="{{ 'label.delete_tasks'|trans }}">
+                {{ 'label.delete_tasks'|trans }}
+            </a>
+        </div>
+    {% else %}
+        <div>
+            {{ 'title.no_task'|trans }}
+        </div>
+    {% endif %}
+    <a href="{{ url('tasks_index') }}" title="{{ 'label.back_to_list'|trans }}">
+        {{ 'label.back_to_list'|trans }}
+    </a>
+{% endblock %}

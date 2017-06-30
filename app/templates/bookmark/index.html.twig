@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+        {{ 'title.bookmark_app'|trans }}
+{% endblock %}
+
+{% block body %}
+    {% include '_paginator.html.twig' with {
+    paginator: paginator,
+    route_name: 'bookmark_index_paginated',
+    } %}
+    <h1>
+        {{ 'title.bookmark_app'|trans }}
+    </h1>
+    {% if paginator.data|length %}
+        <ul>
+            {% for row in paginator.data %}
+                <li>{{ row.bookmark }}, {{ row.url }}</li>
+                <a href="{{ url('bookmark_view', {'id': row.id_bookmarks}) }}" title="{{ 'label.view'|trans }}">
+                    {{ 'label.view'|trans }}
+                </a>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div>
+            {{ 'title.list_is_empty'|trans }}
+        </div>
+    {% endif %}
+    <br>
+    <a href="{{ url('bookmark_add') }}" title="{{ 'label.add_bookmark'|trans }}">
+        {{ 'label.add_bookmark'|trans }}
+    </a>
+{% endblock %}

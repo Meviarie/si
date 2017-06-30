@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+        {{ 'title.tag_list'|trans }}
+{% endblock %}
+
+{% block body %}
+    {% include '_paginator.html.twig' with {
+    paginator: paginator,
+    route_name: 'tag_index_paginated',
+    } %}
+    <h1>
+        {{ 'title.tag_list'|trans }}
+    </h1>
+    {% if paginator.data|length %}
+        <ul>
+            {% for row in paginator.data %}
+                <li>{{ row.name }}</li>
+                <a href="{{ url('tag_view', {'id': row.id}) }}" title="{{ 'label.view_tag'|trans }}">
+                    {{ 'label.view_tag'|trans }}
+                </a>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div>
+            {{ 'title.list_is_empty'|trans }}
+        </div>
+    {% endif %}
+        <br>
+        <a href="{{ url('tag_add') }}" title="{{ 'label.add'|trans }}">
+            {{ 'label.add'|trans }}
+        </a>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+        {{ 'title.main_app'|trans }}
+{% endblock %}
+
+{% block body %}
+
+    <h1>
+        {{ 'title.main_app'|trans }}
+    </h1>
+	<ul>
+                <li>{{ row.dataczas }}<br>{{ row.result }}</li>
+	</ul>
+
+
+{% endblock %}

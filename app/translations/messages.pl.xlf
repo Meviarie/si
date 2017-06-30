@@ -1,0 +1,362 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="pl" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="title.main_app">
+                 <source>title.main_app</source>
+                 <target>Strona Główna</target>
+            </trans-unit>
+             <trans-unit id="title.bookmark">
+                <source>title.bookmark</source>
+                <target>Zakładki</target>
+             </trans-unit>
+             <trans-unit id="title.notes">
+                <source>title.notes</source>
+                <target>Notatki</target>
+             </trans-unit>
+             <trans-unit id="title.events">
+                <source>title.events</source>
+                <target>Wydarzenia</target>
+             </trans-unit>
+             <trans-unit id="title.tasks">
+                <source>title.tasks</source>
+                <target>Zadania</target>
+             </trans-unit>
+             <trans-unit id="title.contacts">
+                <source>title.contacts</source>
+                <target>Kontakty</target>
+             </trans-unit>
+             <trans-unit id="title.contacts_app">
+                <source>title.contacts_app</source>
+                <target>Kontakty</target>
+             </trans-unit>
+             <trans-unit id="title.bookmark_app">
+                <source>title.bookmark_app</source>
+                <target>Zakładki</target>
+             </trans-unit>
+             <trans-unit id="title.notes_app">
+                <source>title.notes_app</source>
+                <target>Notatki</target>
+             </trans-unit>
+             <trans-unit id="title.events_app">
+                <source>title.events_app</source>
+                <target>Wydarzenia</target>
+             </trans-unit>
+             <trans-unit id="title.tasks_app">
+                <source>title.tasks_app</source>
+                <target>Zadania</target>
+             </trans-unit>
+             <trans-unit id="label.view_contact">
+                <source>label.view_contact</source>
+                <target>Wyświetl kontakt</target>
+             </trans-unit>
+             <trans-unit id="label.view_task">
+                <source>label.view_task</source>
+                <target>Wyświetl zadanie</target>
+             </trans-unit>
+             <trans-unit id="label.view_note">
+                <source>label.view_note</source>
+                <target>Wyświetl notatkę</target>
+             </trans-unit>
+             <trans-unit id="label.view_event">
+                <source>label.view_event</source>
+                <target>Wyświetl wydarzenie</target>
+             </trans-unit>
+             <trans-unit id="label.view_bookmark">
+                <source>label.view_bookmark</source>
+                <target>Wyświetl zakładkę</target>
+             </trans-unit>
+             <trans-unit id="label.add_bookmark">
+                 <source>label.add_bookmark</source>
+                 <target>Dodaj zakładkę</target>
+             </trans-unit>
+             <trans-unit id="label.edit_bookmark">
+                  <source>label.edit_bookmark</source>
+                  <target>Edytuj zakładkę</target>
+             </trans-unit>
+             <trans-unit id="label.delete_bookmark">
+                  <source>label.delete_bookmark</source>
+                  <target>Usuń zakładkę</target>
+             </trans-unit>
+             <trans-unit id="label.add_contact">
+                 <source>label.add_contact</source>
+                 <target>Dodaj kontakt</target>
+             </trans-unit>
+             <trans-unit id="label.edit_contact">
+                  <source>label.edit_contact</source>
+                  <target>Edytuj kontakt</target>
+             </trans-unit>
+             <trans-unit id="label.delete_contact">
+                  <source>label.delete_contact</source>
+                  <target>Usuń kontakt</target>
+             </trans-unit>
+             <trans-unit id="label.add_event">
+                 <source>label.add_event</source>
+                 <target>Dodaj wydarzenie</target>
+             </trans-unit>
+             <trans-unit id="label.edit_event">
+                  <source>label.edit_event</source>
+                  <target>Edytuj wydarzenie</target>
+             </trans-unit>
+             <trans-unit id="label.delete_event">
+                  <source>label.delete_event</source>
+                  <target>Usuń wydarzenie</target>
+             </trans-unit>
+             <trans-unit id="label.add_task">
+                 <source>label.add_task</source>
+                 <target>Dodaj zadanie</target>
+             </trans-unit>
+             <trans-unit id="label.edit_task">
+                  <source>label.edit_task</source>
+                  <target>Edytuj wydarzenie</target>
+             </trans-unit>
+             <trans-unit id="label.delete_task">
+                  <source>label.delete_task</source>
+                  <target>Usuń wydarzenie</target>
+             </trans-unit>
+             <trans-unit id="label.add_note">
+                 <source>label.add_note</source>
+                 <target>Dodaj notatke</target>
+             </trans-unit>
+             <trans-unit id="label.edit_note">
+                  <source>label.edit_note</source>
+                  <target>Edytuj notatke</target>
+             </trans-unit>
+             <trans-unit id="label.delete_note">
+                  <source>label.delete_note</source>
+                  <target>Usuń notatke</target>
+             </trans-unit>
+             <trans-unit id="title.bookmark_add">
+                  <source>title.bookmark_add</source>
+                  <target>Dodaj zakładkę</target>
+             </trans-unit>
+             <trans-unit id="label.title_bookmark">
+                  <source>label.title_bookmark</source>
+                  <target>Nazwa zakładki</target>
+             </trans-unit>
+             <trans-unit id="label.url_bookmark">
+                  <source>label.url_bookmark</source>
+                  <target>Adres zakładki</target>
+             </trans-unit>
+             <trans-unit id="label.tags">
+                  <source>label.tags</source>
+                  <target>Tagi</target>
+             </trans-unit>
+             <trans-unit id="action.save_bookmark">
+                  <source>action.save_bookmark</source>
+                  <target>Zapisz zakładkę</target>
+             </trans-unit>
+             <trans-unit id="title.list_is_empty">
+                  <source>title.list_is_empty</source>
+                  <target>Lista jest pusta</target>
+             </trans-unit>
+
+
+             <trans-unit id="title.contacts_add">
+                  <source>title.contacts_add</source>
+                  <target>Dodaj kontakt</target>
+             </trans-unit>
+             <trans-unit id="label.name_contact">
+                  <source>label.name_contact</source>
+                  <target>Imię</target>
+             </trans-unit>
+             <trans-unit id="label.surname_contact">
+                  <source>label.surname_contact</source>
+                  <target>Nazwisko</target>
+             </trans-unit>
+             <trans-unit id="label.number_contact">
+                  <source>label.number_contact</source>
+                  <target>Numer</target>
+             </trans-unit>
+             <trans-unit id="label.mail_contact">
+                  <source>label.mail_contact</source>
+                  <target>Mail</target>
+             </trans-unit>
+             <trans-unit id="label.url_contact">
+                  <source>label.url_contact</source>
+                  <target>Strona internetowa</target>
+             </trans-unit>
+             <trans-unit id="action.save_contact">
+                  <source>action.save_contact</source>
+                  <target>Zapisz kontakt</target>
+             </trans-unit>
+             <trans-unit id="title.events_add">
+                  <source>title.events_add</source>
+                  <target>Dodaj wydarzenie</target>
+             </trans-unit>
+             <trans-unit id="label.name_event">
+                  <source>label.name_event</source>
+                  <target>Wydarzenie</target>
+             </trans-unit>
+             <trans-unit id="label.date_event">
+                  <source>label.date_event</source>
+                  <target>Data</target>
+             </trans-unit>
+             <trans-unit id="label.time_event">
+                  <source>label.time_event</source>
+                  <target>Godzina</target>
+             </trans-unit>
+             <trans-unit id="action.save_events">
+                  <source>action.save_events</source>
+                  <target>Zapisz wydarzenia</target>
+             </trans-unit>
+             <trans-unit id="title.tasks_add">
+                  <source>title.tasks_add</source>
+                  <target>Dodaj zadanie</target>
+             </trans-unit>
+             <trans-unit id="label.title_task">
+                  <source>label.title_task</source>
+                  <target>Zadanie</target>
+             </trans-unit>
+             <trans-unit id="label.content_task">
+                  <source>label.content_task</source>
+                  <target>Treść</target>
+             </trans-unit>
+             <trans-unit id="action.save_task">
+                  <source>action.save_task</source>
+                  <target>Zapisz zadanie</target>
+             </trans-unit>
+             <trans-unit id="title.auth_login">
+                  <source>title.auth_login</source>
+                  <target>Strona logowania</target>
+             </trans-unit>
+             <trans-unit id="auth.login.label">
+                  <source>auth.login.label</source>
+                  <target>Wróć na stronę główną</target>
+             </trans-unit>
+             <trans-unit id="label.login">
+                  <source>label.login</source>
+                  <target>Login</target>
+             </trans-unit>
+             <trans-unit id="label.password">
+                  <source>label.password</source>
+                  <target>Hasło</target>
+             </trans-unit>
+             <trans-unit id="action.login">
+                  <source>action.login</source>
+                  <target>Zaloguj się</target>
+             </trans-unit>
+             <trans-unit id="auth.logout.label">
+                  <source>auth.logout.label</source>
+                  <target>Wyloguj</target>
+             </trans-unit>
+             <trans-unit id="title.notes_add">
+                  <source>title.notes_add</source>
+                  <target>Dodaj notatkę</target>
+             </trans-unit>
+             <trans-unit id="label.content_note">
+                  <source>label.content_note</source>
+                  <target>Notatka</target>
+             </trans-unit>
+             <trans-unit id="action.save_notes">
+                  <source>action.save_notes</source>
+                  <target>Zapisz notatkę</target>
+             </trans-unit>
+             <trans-unit id="label.remember_me">
+                  <source>label.remember_me</source>
+                  <target>Pamiętaj mnie</target>
+             </trans-unit>
+             <trans-unit id="title.main">
+                  <source>title.main</source>
+                  <target>Strona Główna</target>
+             </trans-unit>
+             <trans-unit id="title.contact_app">
+                  <source>title.contact_app</source>
+                  <target>Kontakt</target>
+             </trans-unit>
+             <trans-unit id="label.edit">
+                  <source>label.edit</source>
+                  <target>Edytuj</target>
+             </trans-unit>
+             <trans-unit id="label.delete">
+                  <source>label.delete</source>
+                  <target>Usuń</target>
+             </trans-unit>
+             <trans-unit id="label.back_to_list">
+                  <source>label.back_to_list</source>
+                  <target>Powrót</target>
+             </trans-unit>
+             <trans-unit id="action.save">
+                  <source>action.save</source>
+                  <target>Zapisz</target>
+             </trans-unit>
+             <trans-unit id="title.contacts_edit">
+                  <source>title.contacts_edit</source>
+                  <target>Edytuj kontakt</target>
+             </trans-unit>
+             <trans-unit id="title.contacts_delete">
+                  <source>title.contacts_delete</source>
+                  <target>Usuń kontakt</target>
+             </trans-unit>
+             <trans-unit id="action.delete">
+                  <source>action.delete</source>
+                  <target>Usuń</target>
+             </trans-unit>
+             <trans-unit id="label.view">
+                  <source>label.view</source>
+                  <target>Wyświetl</target>
+             </trans-unit>
+             <trans-unit id="title.admin_panel">
+                  <source>title.admin_panel</source>
+                  <target>Panel admina</target>
+             </trans-unit>
+             <trans-unit id="label.change_password">
+                  <source>label.change_password</source>
+                  <target>Zmień hasło</target>
+             </trans-unit>
+             <trans-unit id="label.change_role">
+                  <source>label.change_role</source>
+                  <target>Zmień uprawnienia</target>
+             </trans-unit>
+             <trans-unit id="label.back_to_users">
+                  <source>label.back_to_users</source>
+                  <target>Wróć</target>
+             </trans-unit>
+             <trans-unit id="admin.role">
+                  <source>admin.role</source>
+                  <target>Zmień uprawnienia</target>
+             </trans-unit>
+             <trans-unit id="User">
+                  <source>User</source>
+                  <target>Użytkownik</target>
+             </trans-unit>
+             <trans-unit id="Name">
+                  <source>Name</source>
+                  <target>Nazwa</target>
+             </trans-unit>
+             <trans-unit id="admin.password">
+                  <source>admin.password</source>
+                  <target>Zmień hasło</target>
+             </trans-unit>
+             <trans-unit id="label.register">
+                  <source>label.register</source>
+                  <target>Załóż konto</target>
+             </trans-unit>
+
+
+             <trans-unit id="title.page">
+                  <source>title.page</source>
+                  <target>Strona do zarządzania informacją osobistą</target>
+             </trans-unit>
+
+
+
+
+
+
+             <trans-unit id="message.element_successfully_edited">
+                    <source>message.element_successfully_edited</source>
+                    <target>Element został pomyślnie edytowany</target>
+             </trans-unit>
+             <trans-unit id="message.element_successfully_added">
+                    <source>message.element_successfully_added</source>
+                    <target>Element został pomyślnie dodany</target>
+             </trans-unit>
+             <trans-unit id="message.element_successfully_deleted">
+                    <source>message.element_successfully_deleted</source>
+                    <target>Element został pomyślnie usunięty</target>
+             </trans-unit>
+
+        </body>
+    </file>
+</xliff>

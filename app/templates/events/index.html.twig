@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.events_app'|trans }}
+{% endblock %}
+
+{% block body %}
+    {% include '_paginator.html.twig' with {
+    paginator: paginator,
+    route_name: 'events_index_paginated',
+    } %}
+    <h1>
+        {{ 'title.events_app'|trans }}
+    </h1>
+    {% if paginator.data|length %}
+        <ul>
+            {% for row in paginator.data %}
+                <li>{{ row.title }}, {{ row.url }}</li>
+                <a href="{{ url('events_view', {'id': row.id}) }}" title="{{ 'label.view_event'|trans }}">
+                    {{ 'label.view_event'|trans }}
+                </a>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div>
+            {{ 'title.list_is_empty'|trans }}
+        </div>
+    {% endif %}
+    <br>
+    <a href="{{ url('events_add') }}" title="{{ 'label.add_event'|trans }}">
+        {{ 'label.add_event'|trans }}
+    </a>
+
+
+{% endblock %}

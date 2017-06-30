@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+        {{ 'title.contacts_app'|trans }}
+{% endblock %}
+
+{% block body %}
+    {% include '_paginator.html.twig' with {
+    paginator: paginator,
+    route_name: 'contacts_index_paginated',
+    } %}
+    <h1>
+        {{ 'title.contacts_app'|trans }}
+    </h1>
+    {% if paginator.data|length %}
+        <ul>
+            {% for row in paginator.data %}
+                <li>{{ row.name }}, {{ row.surname }}, {{ row.phone_number }}, {{ row.mail }}, {{ row.web_page }}</li>
+                <a href="{{ url('contacts_view', {'id': row.id_contacts}) }}" title="{{ 'label.view_contact'|trans }}">
+                    {{ 'label.view_contact'|trans }}
+                </a>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div>
+            {{ 'title.list_is_empty'|trans }}
+        </div>
+    {% endif %}
+    <br>
+    <a href="{{ url('contacts_add') }}" title="{{ 'label.add_contact'|trans }}">
+        {{ 'label.add_contact'|trans }}
+    </a>
+
+
+{% endblock %}

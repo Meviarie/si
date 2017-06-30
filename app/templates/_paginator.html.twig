@@ -1,0 +1,20 @@
+{#
+    Default view for paginator.
+
+    parameters:
+        * `paginator` - paginator
+        * `route_name` - route name
+#}
+{% if paginator.page > 1 %}
+    {% set previous = (paginator.page - 1) %}
+    <a href="{{ url(route_name, {'page': previous}) }}" title="{{ 'label.nav.prev'|trans }}">
+        {{ 'labels.nav.prev'|trans }}
+    </a>
+{%  endif %}
+
+{% if paginator.page < paginator.pages_number %}
+    {% set next = (paginator.page + 1) %}
+    <a href="{{ url(route_name, {'page': next}) }}" title="{{ 'label.nav.next'|trans }}">
+        {{ 'label.nav.next'|trans }}
+    </a>
+{% endif  %}

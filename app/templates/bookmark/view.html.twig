@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.bookmark'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        {{ 'title.bookmark'|trans }}
+    </h1>
+    {% if bookmark|length %}
+        <div>
+            {{ bookmark.bookmark }}, {{ bookmark.url }}
+            <br>
+            <a href="{{ url('bookmark_edit', {'id': bookmark.id_bookmarks}) }}" title="{{ 'label.edit'|trans }}">
+                {{ 'label.edit_bookmark'|trans }}
+            </a>
+            <br>
+            <a href="{{ url('bookmark_delete', {'id': bookmark.id_bookmarks}) }}" title="{{ 'label.delete'|trans }}">
+                {{ 'label.delete_bookmark'|trans }}
+            </a>
+        </div>
+    {% else %}
+        <div>
+            {{ 'title.no_bookmark'|trans }}
+        </div>
+    {% endif %}
+    <a href="{{ url('bookmark_index') }}" title="{{ 'label.back_to_list'|trans }}">
+        {{ 'label.back_to_list'|trans }}
+    </a>
+{% endblock %}

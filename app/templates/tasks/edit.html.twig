@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title.tasks_edit'|trans({'%id%': tasks.id}) }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.bookmark_edit'|trans({'%id%': tasks.id}) }}</h1>
+    {{ form_start(form, { method: 'post', action: url('tasks_edit', {'id': tasks.id}) }) }}
+
+    {% form_theme form with ['bootstrap_3_horizontal_layout.html.twig', 'Form/form_errors.html.twig'] %}
+
+    {{ form_widget(form) }}
+    <input type="submit" value="{{ 'action.save_tasks'|trans }}" class="btn btn-success" />
+    {{ form_end(form) }}
+{% endblock %}

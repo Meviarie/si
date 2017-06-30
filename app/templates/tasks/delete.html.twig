@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title.tasks_delete'|trans({'%id%': tag.id}) }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.tasks_delete'|trans({'%id%': tag.id}) }}</h1>
+    {{ form_start(form, { method: 'post', action: url('tasks_delete', {'id': tasks.id}) }) }}
+
+    {% form_theme form with ['bootstrap_3_horizontal_layout.html.twig', 'form/form_errors.html.twig'] %}
+
+    {{ form_widget(form) }}
+    <input type="submit" value="{{ 'action.delete'|trans }}" class="btn btn-success" />
+    {{ form_end(form) }}
+    <a href="{{ url('tasks_index') }}" title="{{ 'label.back_to_list'|trans }}" class="btn btn-default">
+        <span class="fa fa-mail-reply" aria-hidden="true"></span>
+        {{ 'label.back_to_list'|trans }}
+    </a>
+{% endblock %}

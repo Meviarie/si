@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+        {{ 'title.admin_panel'|trans }}
+{% endblock %}
+
+{% block body %}
+    {% include '_paginator.html.twig' with {
+    paginator: paginator,
+    route_name: 'admin_index_paginated',
+    } %}
+    <h1>
+        {{ 'title.admin_panel'|trans }}
+    </h1>
+    {% if paginator.data|length %}
+        <ul>
+            {% for row in paginator.data %}
+                <li>{{ row.login }}</li>
+                <a href="{{ url('admin_delete', {'id': row.id_login_data}) }}" title="{{ 'label.delete'|trans }}">
+                    {{ 'label.delete'|trans }}
+                </a>
+                <br>
+                <a href="{{ url('admin_edit', {'id': row.id_login_data}) }}" title="{{ 'label.change_password'|trans }}">
+                    {{ 'label.change_password'|trans }}
+                </a>
+                <br>
+                <a href="{{ url('admin_edit_role', {'id': row.id_login_data}) }}" title="{{ 'label.change_role'|trans }}">
+                    {{ 'label.change_role'|trans }}
+                </a>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div>
+            {{ 'title.list_is_empty'|trans }}
+        </div>
+    {% endif %}
+    <br>
+{% endblock %}
