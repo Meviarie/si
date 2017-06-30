@@ -87,31 +87,6 @@ class RegisterType extends AbstractType
                 ],
             ]
         );
-        $builder->add(
-            'mail',
-            EmailType::class,
-            [
-                'label' => 'label.mail',
-                'required' => true,
-                'attr' => [
-                    'max_length' => 45,
-                ],
-                'constraints' => [
-                    new Assert\NotBlank(),
-                    new Assert\Length(
-                        [
-                            'min' => 3,
-                            'max' => 45,
-                        ]
-                    ),
-                    /*
-                    new Assert\mail(
-                        ['groups' => ['contact-default']]
-                    ),
-                    */
-                ],
-            ]
-        );
     }
 
     /**

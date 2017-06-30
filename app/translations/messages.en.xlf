@@ -351,6 +351,19 @@
                   <source>niedziela</source>
                   <target>Sunday</target>
              </trans-unit>
+            <trans-unit id="label.repeat_password">
+                  <source>label.repeat_password</source>
+                  <target>Repeat password</target>
+             </trans-unit>
+             <trans-unit id="label.mail">
+                  <source>label.mail</source>
+                  <target>Mail</target>
+             </trans-unit>
+             <trans-unit id="register.edit">
+                  <source>register.edit</source>
+                  <target>Zarejestruj się</target>
+             </trans-unit>
+
 
              <trans-unit id="title.page">
                   <source>title.page</source>

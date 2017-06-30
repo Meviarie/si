@@ -86,18 +86,20 @@ class RegisterRepository
     public function save($register, $app)
     {
         $this->db->beginTransaction();
-
         try {
 
-            if (isset($register['id']) && ctype_digit((string) $register['id'])) {
+            if (isset($register['id']) && ctype_digit((string) $register['id']) && $register['password']!==$register['repeat_password']) {
                 // update record
+
                 $register['password'] = $app['security.encoder.bcrypt']->encodePassword($register['password'], '');
 
-                $this->db->update('login_data', $register, ['id' => $register['id']]);
+                $this->db->update('login_data', $register);
 
 
             } else {
                 // add new record
+                unset($register['repeat_password']);
+                //dump($register);
                 $register['password'] = $app['security.encoder.bcrypt']->encodePassword($register['password'], '');
                 $register['user_roles_id_user_roles'] = '2';
                 $this->db->insert('login_data', $register);
